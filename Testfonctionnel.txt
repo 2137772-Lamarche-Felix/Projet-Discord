@@ -1,0 +1,31 @@
+Test de la fonctionnalité de base du bot
+1. Est ce qu'on recoit bien le role de peuple quand on rejoins le serveur ? Oui
+2. Je recois bien le message de bienvenue lorsque je rejoins le serveur ? Oui
+3. Le role peuple n'a pas la permission d'écrire dans le channel de bienvenue ? Oui
+4. Le role peuple voit seulement le channel de bienvenue, assosiation de role, ajout-role et général ? Oui
+5. Le message pour l'assosiation de role est bien envoyé dans le channel assosiation de role ? Oui
+6. Ce meme message a bien les 5 reactions de base ? Oui
+7. Lorsqu'on ajout une réaction avec le pistolet, on recoit bien le role Counter-Strike ? Oui
+8. Lorsqu'on ajout une réaction avec le mage, on recoit bien le role League of legend ? Oui
+9. Lorsqu'on ajout une réaction avec le Ballon de soccer, on recoit bien le role Rocket-League ? Oui
+10. Lorsqu'on ajout une réaction avec le l'emoji avec les yeux cachés, on recoit bien le role World of Warcraft ? Oui
+11. Lorsqu'on ajout une réaction avec la fleur de lys mauve , on recoit bien le role Twitch ? Oui
+12. Lorsqu'on a le role de Counter-Strike, on peut écrire et voir les messages dans le channel Counter-Strike? Oui
+13. Lorsqu'on a le role de League of legend, on peut écrire et voir les messages dans le channel League of legend? Oui
+14. Lorsqu'on a le role de Rocket-League, on peut écrire et voir les messages dans le channel Rocket-League? Oui
+15. Lorsqu'on a le role de World of Warcraft, on peut écrire et voir les messages dans le channel World of Warcraft? Oui
+16. Lorsqu'on a le role de Twitch, on peut écrire et voir les messages dans le channel Twitch? Oui
+17. Lorsqu'on a le role de Counter-Strike, on ne peut pas écrire et voir les messages dans le channel League of legend? Oui
+18. Lorsqu'on a le role de League of Legend, on ne peut pas écrire et voir les messages dans le channel Rocket-League? Oui
+19. Lorsqu'on a le role de Twitch, on ne peut pas écrire et voir les messages dans le channel World of Warcraft? Oui
+20. Lorsqu'on a le role de World of Warcraft, on ne peut pas écrire et voir les messages dans le channel Twitch? Oui
+21. La commande !aide fonctionne ? Oui
+22. La commande !aide affiche bien les commandes disponibles ? Oui
+23. La commande !listeRole liste bien tous les roles disponibles ? Oui
+24. La commande !creationRole Techno fonctionne le role techno a bien été créé ? Oui
+25. La commande !retirerRole Techno permet de ne plus etre dans le role Techno mais celui existe encore ? Oui
+26. la commande !ajoutRole Techno fonctionne le membre peut bien rejoindre le role de Techno ? Oui
+27. La commande !suppresionRole Techno fonctionne le role techno et le salon textuel ont bien été supprimé  ? Oui
+28. La commande !suppresionRole Techno message d'erreur pour dire que le role n'existe pas, donc il n'a pas été supprimé  ? Oui
+29. On peut créer le role Peuple avec !creationRole Peuple ? Non faut pas
+30. On peut créer un role avec un nom qui existe déjà ? Non
