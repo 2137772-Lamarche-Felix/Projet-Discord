@@ -24,7 +24,7 @@ load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
-intents.members = True  # Enable the GUILD_MEMBERS intent
+intents.members = True  
 intents.message_content = True
 # Crée une instance de la classe Client qui représente le bot
 bot = commands.Bot(command_prefix='!', intents=intents)
@@ -36,10 +36,10 @@ async def on_ready():
 	# Variable pour compter le nombre de serveur 
 	guild_count = 0
 	for guild in bot.guilds:
-		# PRINT THE SERVER'S ID AND NAME.
+		# Montre l'id du serveur et son nom
 		print(f"- {guild.id} (name: {guild.name})")
 
-		# INCREMENTS THE GUILD COUNTER.
+		# Incrémente le nombre de serveur
 		guild_count = guild_count + 1
 	# Permet de créer les channels de bienvenue et de role
 	await creation_role(guild)
@@ -50,7 +50,7 @@ async def on_ready():
 # Messge de bienvenue quand un nouveau membre arrive sur le serveur
 @bot.event
 async def on_member_join(member):
-    # Get the guild (server) where the member joined
+    # Récupère le membre et le serveur
 	guild = member.guild
 	message_explicatif = """
 	Nous avons ajouté quelques fonctionnalités pratiques à notre bot pour faciliter la gestion des rôles dans notre serveur Discord. Voici comment les utiliser : \n
@@ -79,11 +79,11 @@ async def on_member_join(member):
     # Pour trouver le channel de bienvenue
 	channel_bienvenue = discord.utils.get(guild.text_channels, name='bienvenue')  
 	if channel_bienvenue:
-        # Send the welcome message in the specified channel
+        # Message de bienvenue
 		welcome_message = f'Salut {member.mention}! Bienvenue sur le serveur discord!'+ message_explicatif
 		await channel_bienvenue.send(welcome_message)
 	await member.add_roles(discord.utils.get(guild.roles, name="Peuple"))
-# EVENT LISTENER FOR WHEN A NEW MESSAGE IS SENT TO A CHANNEL.
+
 @bot.event
 async def on_reaction_add(reaction,member):
     ## Get info pour le channel de role
@@ -387,7 +387,7 @@ async def permission_role(guild,roleVoulu):
 	guild.default_role: discord.PermissionOverwrite(read_messages=False, send_messages=False),
 	roleVoulu: discord.PermissionOverwrite(read_messages=True, send_messages=True)
 	}
-# EXECUTES THE BOT WITH THE SPECIFIED TOKEN. TOKEN HAS BEEN REMOVED AND USED JUST AS AN EXAMPLE.
+
 
 
 bot.run(DISCORD_TOKEN)
